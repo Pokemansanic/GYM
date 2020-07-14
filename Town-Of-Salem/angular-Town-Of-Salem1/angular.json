@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-Town-Of-Salem1"
+    }
+  },
+  "defaultProject": "angular-Town-Of-Salem1",
+  "cli": {
+    "analytics": "c918a37c-09ff-4b32-a4fc-f9ee936739ba"
+  }
 }

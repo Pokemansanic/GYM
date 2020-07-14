@@ -10,7 +10,7 @@ import { ROLES } from '../mock-roles';
 
 export class RolesComponent implements OnInit {
 
-  Roles = ROLES;
+  roles = ROLES;
   selectedRole: Role;
 
   constructor() { }
