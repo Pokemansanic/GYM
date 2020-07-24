@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Role } from '../role';
-import { ROLES } from '../mock-roles';
+import { RoleService } from '../role.service';
 
 @Component({
   selector: 'app-roles',
@@ -10,14 +10,16 @@ import { ROLES } from '../mock-roles';
 
 export class RolesComponent implements OnInit {
 
-  roles = ROLES;
+  roles: Role[];
   selectedRole: Role;
 
-  constructor() { }
-
+  constructor(private roleService: RoleService) {}
   ngOnInit() {
+    this.getRoles();
   }
-
+  getRoles(): void {
+    this.roles = this.roleService.getRoles();
+  }
   onSelect(role: Role): void {
     this.selectedRole = role;
   }
