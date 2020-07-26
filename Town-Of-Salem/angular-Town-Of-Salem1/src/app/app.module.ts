@@ -7,16 +7,21 @@ import { RolesComponent } from './roles/roles.component';
 import { RoleDetailComponent } from './role-detail/role-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 
+import { AppRoutingModule }     from './app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     RolesComponent,
     RoleDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
