@@ -16,4 +16,11 @@ export class RoleService {
     this.messageService.add('RoleService: fetched roles');
     return of(ROLES);
   }
+
+
+  getRole(id: number): Observable<Role> {
+    // TODO: send the message _after_ fetching the role
+    this.messageService.add('RoleService: fetched roles id=${id}');
+    return of(ROLES.find(role => role.id === id));
+  }
 }
