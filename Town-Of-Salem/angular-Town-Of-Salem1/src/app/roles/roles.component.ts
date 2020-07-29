@@ -24,4 +24,13 @@ export class RolesComponent implements OnInit {
     this.roleService.getRoles()
         .subscribe(roles => this.roles = roles);
   }
+
+    add(name: string): void {
+    name = name.trim();
+    if (!name) { return; }
+    this.roleService.addRole({ name } as Role)
+      .subscribe(role => {
+        this.roles.push(role);
+      });
+  }
 }

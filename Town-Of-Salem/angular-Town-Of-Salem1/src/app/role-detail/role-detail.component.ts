@@ -28,4 +28,14 @@ export class RoleDetailComponent implements OnInit {
     this.roleService.getRole(id)
       .subscribe(role => this.role = role);
   }
+  
+ goBack(): void {
+  this.location.back();
+ }
+
+ save(): void {
+  this.roleService.updateRole(this.role)
+    .subscribe(() => this.goBack());
+}
+
 }

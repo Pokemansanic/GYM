@@ -6,4 +6,12 @@
     <span class="badge">{{role.id}}</span> {{role.name}}
   </li>
 </ul>
-
+<div>
+  <label>Role name:
+    <input #roleName />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(roleName.value); roleName.value=''">
+    add
+  </button>
+</div>
